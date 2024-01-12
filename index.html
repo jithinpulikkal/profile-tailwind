@@ -31,14 +31,14 @@
                       <i style="color: #047857" class="fas fa-briefcase">&nbsp;</i>Web Developer
                     </p>
 
-                    <p class="pt-2 text-gray-600 text-xs flex items-center justify-center lg:justify_start">
+                    <p class="pt-2 text-gray-600 text-xs font-bold flex items-center justify-center lg:justify_start">
                         <i style="color: #047857" class="fas fa-globe">&nbsp;</i>  Malappuram
                     </p>
 
                     <p class="pt-8 text-sm">MERN Stack Developer</p>
 
                     <div class="pt-12 pb-8">
-                        <button class="bg-black hover:green-900 text-white font-bold py-2 px-4 rounded-full">
+                        <button id="touch" class="bg-black hover:green-900 text-white font-bold py-2 px-4 rounded-full">
                             Get In Touch
                         </button>
                     </div>
@@ -77,6 +77,7 @@
             const toggle = document.querySelector(".toggleBtn")
             const body = document.querySelector("body")
             const profile = document.getElementById("profile")
+            const touch = document.getElementById("touch")
 
             toggle.addEventListener("click", ()=> {
                 if(body.classList.contains("text-gray-900")){
@@ -85,12 +86,16 @@
                     body.classList.add("text-gray-100");
                     profile.classList.remove("bg-white")
                     profile.classList.add("bg-gray-900")
+                    touch.classList.remove("bg-black","text-white")
+                    touch.classList.add("bg-white","text-black")
                 }else{
                     toggle.innerHTML="💡"
                     body.classList.add("text-gray-900");
                     body.classList.remove("text-gray-100");
                     profile.classList.add("bg-white")
                     profile.classList.remove("bg-gray-900")
+                    touch.classList.add("bg-black","text-white")
+                    touch.classList.remove("bg-white","text-black")
                 }
             })
 
